@@ -124,7 +124,7 @@ class _SubmitButtonState extends State<SubmitButton> {
       },
       child: Text('Submit'),
       style: ElevatedButton.styleFrom(
-        primary: Colors.purple,
+        primary: Colors.teal,
         minimumSize: Size(150, 36),
       ),
     );
