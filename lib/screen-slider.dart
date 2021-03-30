@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+//this is the widget for the slider and accompaning text
 class ScreenSlider extends StatefulWidget {
   @override
   State createState() => _ScreenSlider();
 }
 
 class _ScreenSlider extends State<ScreenSlider> {
-  var range_num = 0.0;
+  int range_num = 0;
 
   void _moveSlider() {}
   @override
@@ -15,9 +16,12 @@ class _ScreenSlider extends State<ScreenSlider> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
             child: Container(
-              child: Text('Distance in Minutes', style: TextStyle(color: Colors.white, fontSize: 20),),
+              child: Text(
+                'Distance in Minutes',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
             ),
           ),
           Padding(
@@ -25,14 +29,24 @@ class _ScreenSlider extends State<ScreenSlider> {
             child: Slider(
                 min: 0.0,
                 max: 30.0,
-                value: range_num,
+                value: range_num.toDouble(),
                 activeColor: Colors.white,
-                onChanged: (newValue) {
+                //where the actual values are updated
+                onChanged: (double newValue) {
                   setState(() {
-                    range_num = newValue;
+                    range_num = newValue.round();
                   });
                 }),
           ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: Container(
+              child: Text(
+                "$range_num Minuets",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          )
         ],
       ),
     );
