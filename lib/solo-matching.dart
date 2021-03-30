@@ -51,6 +51,11 @@ class SoloMatchingScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                   const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
                 ],
               ),
             ),
