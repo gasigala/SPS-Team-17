@@ -7,9 +7,8 @@ class ScreenSlider extends StatefulWidget {
 }
 
 class _ScreenSlider extends State<ScreenSlider> {
-  int range_num = 0;
+  int rangeNum = 0;
 
-  void _moveSlider() {}
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,12 +28,12 @@ class _ScreenSlider extends State<ScreenSlider> {
             child: Slider(
                 min: 0.0,
                 max: 30.0,
-                value: range_num.toDouble(),
+                value: rangeNum.toDouble(),
                 activeColor: Colors.white,
                 //where the actual values are updated
                 onChanged: (double newValue) {
                   setState(() {
-                    range_num = newValue.round();
+                    rangeNum = newValue.round();
                   });
                 }),
           ),
@@ -42,7 +41,7 @@ class _ScreenSlider extends State<ScreenSlider> {
             padding: const EdgeInsets.all(8),
             child: Container(
               child: Text(
-                "$range_num Minuets",
+                "$rangeNum Minuets",
                 style: TextStyle(color: Colors.white),
               ),
             ),

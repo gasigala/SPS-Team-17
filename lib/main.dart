@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './solo-matching.dart';
+import './create-solo-session.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
               child: Text('Solo Room'),
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SoloMatchingScreen()),
+                  MaterialPageRoute(builder: (context) => CreateSoloSession()),
                 );
               },
             ),
