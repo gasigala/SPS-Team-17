@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './screen-slider.dart';
 import './price-buttonbar.dart';
+import './dropdown-category.dart';
 
 class CreateSoloSession extends StatelessWidget {
   @override
@@ -77,11 +78,54 @@ class CreateSoloSession extends StatelessWidget {
                     ),
                   ),
                   PriceButtonBar(),
+                  const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Select Category',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                  DropDownCategory(),
+                  const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
+                  SubmitButton(),
                 ],
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class SubmitButton extends StatefulWidget {
+  @override
+  _SubmitButtonState createState() => _SubmitButtonState();
+}
+
+class _SubmitButtonState extends State<SubmitButton> {
+  bool _hasBeenPresed = false;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        setState(
+          () {},
+        );
+      },
+      child: Text('Submit'),
+      style: ElevatedButton.styleFrom(
+        primary: Colors.purple,
+        minimumSize: Size(150, 36),
       ),
     );
   }

@@ -14,51 +14,58 @@ class _PriceButtonBarState extends State<PriceButtonBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
-      child: ButtonBar(
-        alignment: MainAxisAlignment.center,
+      child: ListView(
+        shrinkWrap: true,
         children: [
-          OutlinedButton(
-            onPressed: () {
-              setState(
-                () {
-                  _button1 = !_button1;
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            children: [
+              OutlinedButton(
+                onPressed: () {
+                  setState(
+                    () {
+                      _button1 = !_button1;
+                    },
+                  );
                 },
-              );
-            },
-            child: Text('\$'),
-            style: OutlinedButton.styleFrom(
-                primary: _button1 ? Colors.green : Colors.white,
-                side: BorderSide(
-                    color: _button1 ? Colors.green : Colors.white, width: 2)),
-          ),
-          OutlinedButton(
-            onPressed: () {
-              setState(
-                () {
-                  _button2 = !_button2;
+                child: Text('\$'),
+                style: OutlinedButton.styleFrom(
+                    primary: _button1 ? Colors.green : Colors.white,
+                    side: BorderSide(
+                        color: _button1 ? Colors.green : Colors.white,
+                        width: 2)),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  setState(
+                    () {
+                      _button2 = !_button2;
+                    },
+                  );
                 },
-              );
-            },
-            child: Text('\$\$'),
-            style: OutlinedButton.styleFrom(
-                primary: _button2 ? Colors.green : Colors.white,
-                side: BorderSide(
-                    color: _button2 ? Colors.green : Colors.white, width: 2)),
-          ),
-          OutlinedButton(
-            onPressed: () {
-              setState(
-                () {
-                  _button3 = !_button3;
+                child: Text('\$\$'),
+                style: OutlinedButton.styleFrom(
+                    primary: _button2 ? Colors.green : Colors.white,
+                    side: BorderSide(
+                        color: _button2 ? Colors.green : Colors.white,
+                        width: 2)),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  setState(
+                    () {
+                      _button3 = !_button3;
+                    },
+                  );
                 },
-              );
-            },
-            child: Text('\$\$\$'),
-            style: OutlinedButton.styleFrom(
-                primary: _button3 ? Colors.green : Colors.white,
-                side: BorderSide(
-                    color: _button3 ? Colors.green : Colors.white, width: 2)),
+                child: Text('\$\$\$'),
+                style: OutlinedButton.styleFrom(
+                    primary: _button3 ? Colors.green : Colors.white,
+                    side: BorderSide(
+                        color: _button3 ? Colors.green : Colors.white,
+                        width: 2)),
+              ),
+            ],
           ),
         ],
       ),
