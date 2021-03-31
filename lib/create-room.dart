@@ -9,7 +9,7 @@ class CreateRoom extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xff01F32),
+        backgroundColor: Color(0xff010F32),
         body: SafeArea(
           child: Center(
             child: Padding(
