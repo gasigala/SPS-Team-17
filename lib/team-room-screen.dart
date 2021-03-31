@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'create-room.dart';
+import 'lobby-screen.dart';
+
 class Team extends StatefulWidget {
   @override
   _TeamState createState() => _TeamState();
@@ -77,9 +80,8 @@ class _TeamState extends State<Team> {
                     primary: Colors.black),
                 child: Text("JOIN"),
                 onPressed: () {
-                  setState(() {
-                    name = _controller.text;
-                  });
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Lobby()));
                 },
               ),
             ),
@@ -94,7 +96,10 @@ class _TeamState extends State<Team> {
                     backgroundColor: Colors.pink,
                     primary: Colors.black),
                 child: Text("HOST"),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CreateRoom()));
+                },
               ),
             )
           ],
