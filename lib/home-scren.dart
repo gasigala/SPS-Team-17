@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sps_team17/create-room.dart';
+import 'package:sps_team17/create-solo-session.dart';
 import 'package:sps_team17/team-room-screen.dart';
 
 class Home extends StatefulWidget {
@@ -48,7 +48,8 @@ class _HomeState extends State<Home> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CreateRoom()));
+                                //links to create solo session
+                                builder: (context) => CreateSoloSession()));
                       }),
                 ),
                 Ink(
