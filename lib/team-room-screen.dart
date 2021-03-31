@@ -81,7 +81,7 @@ class _TeamState extends State<Team> {
                 child: Text("JOIN"),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Lobby()));
+                      MaterialPageRoute(builder: (context) => JoinLobby()));
                 },
               ),
             ),

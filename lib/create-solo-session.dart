@@ -46,7 +46,7 @@ class CreateSoloSession extends StatelessWidget {
                     child: TextFormField(
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        hintText: 'Enter your Adress',
+                        hintText: 'Enter your Address',
                         hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(25.0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sps_team17/host-lobby-screen.dart';
 
 import './screen-slider.dart';
 import './price-buttonbar.dart';
@@ -46,7 +47,7 @@ class CreateRoom extends StatelessWidget {
                     child: TextFormField(
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                        hintText: 'Enter your Adress',
+                        hintText: 'Enter your Address',
                         hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(25.0),
@@ -118,9 +119,9 @@ class _SubmitButtonState extends State<SubmitButton> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        setState(
-          () {},
-        );
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => HostLobby()));
+
       },
       child: Text('Submit'),
       style: ElevatedButton.styleFrom(
