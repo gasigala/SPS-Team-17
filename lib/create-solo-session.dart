@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 
 import './screen-slider.dart';
 import './price-buttonbar.dart';
