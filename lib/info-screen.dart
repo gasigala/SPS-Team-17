@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './back-button.dart';
 
 class InfoScreen extends StatelessWidget {
   @override
@@ -60,6 +61,7 @@ class InfoScreen extends StatelessWidget {
               ),
             ],
           ),
+          BackButtonSPS(),
         ],
       ),
     );
