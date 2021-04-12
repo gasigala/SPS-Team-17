@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import './home-scren.dart';
-import './info-screen.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -11,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FoodMates',
-      home: InfoScreen(),
+      home: Home(),
     );
   }
 }
