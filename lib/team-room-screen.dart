@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'create-room.dart';
 import 'lobby-screen.dart';
 import './back-button.dart';
-
+import './info-screen.dart';
 
 class Team extends StatefulWidget {
   @override
@@ -109,6 +109,27 @@ class _TeamState extends State<Team> {
             ],
           ),
           BackButtonSPS(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 25, 25),
+            child: Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                child: Ink(
+                  decoration: ShapeDecoration(
+                      color: Color(0xff04E9CD), shape: CircleBorder()),
+                  child: IconButton(
+                      icon: Icon(Icons.info, size: 35
+                      ,),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => InfoScreen()),
+                        );
+                      }),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
