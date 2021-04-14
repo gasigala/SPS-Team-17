@@ -13,6 +13,7 @@ class Team extends StatefulWidget {
 
 class _TeamState extends State<Team> {
   final _controller = TextEditingController();
+  final _controller2 = TextEditingController();
   String name = "";
   String gameKey = "";
 
@@ -20,95 +21,101 @@ class _TeamState extends State<Team> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff000C2D),
-      body:(Stack(
+      body: (Stack(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                height: 200,
-              ),
-              RichText(
-                  text: TextSpan(
-                      style: TextStyle(fontSize: 45),
-                      children: <TextSpan>[
-                    TextSpan(
-                        text: 'Team',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold)),
-                    TextSpan(
-                        text: 'Room',
-                        style: TextStyle(
-                            color: Color(0xff04E9CD),
-                            fontWeight: FontWeight.bold))
-                  ])),
-              SizedBox(height: 30),
-              Container(
-                child: TextField(
-                  textAlign: TextAlign.center,
-                  controller: _controller,
-                  decoration: InputDecoration(
-                    hintText: 'Name',
-                    hintStyle: TextStyle(color: Colors.white),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                      //borderRadius: BorderRadius.all(Radius.circular(30))
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  height: 200,
+                ),
+                RichText(
+                    text: TextSpan(
+                        style: TextStyle(fontSize: 45),
+                        children: <TextSpan>[
+                      TextSpan(
+                          text: 'Team',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                      TextSpan(
+                          text: 'Room',
+                          style: TextStyle(
+                              color: Color(0xff04E9CD),
+                              fontWeight: FontWeight.bold))
+                    ])),
+                SizedBox(height: 30),
+                Container(
+                  child: TextField(
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                    controller: _controller,
+                    decoration: InputDecoration(
+                      hintText: 'Name',
+                      hintStyle: TextStyle(color: Colors.white),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        //borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
                     ),
                   ),
+                  padding: EdgeInsets.symmetric(horizontal: 32),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 32),
-              ),
-              Container(
-                child: TextField(
-                  textAlign: TextAlign.center,
-                  controller: _controller,
-                  decoration: InputDecoration(
-                    hintText: 'Game Pin',
-                    hintStyle: TextStyle(color: Colors.white),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                      //borderRadius: BorderRadius.all(Radius.circular(30))
+                Container(
+                  child: TextField(
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.center,
+                    controller: _controller2,
+                    decoration: InputDecoration(
+                      hintText: 'Game Pin',
+                      hintStyle: TextStyle(color: Colors.white),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        //borderRadius: BorderRadius.all(Radius.circular(30))
+                      ),
                     ),
                   ),
+                  padding: EdgeInsets.symmetric(horizontal: 32),
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 32),
-              ),
-              SizedBox(
-                height: 32,
-              ),
-             Container(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 159, vertical: 18),
-                      backgroundColor: Color(0xff04E9CD),
-                      primary: Colors.black),
-                  child: Text("JOIN"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => JoinLobby()));
-                  },
+                SizedBox(
+                  height: 32,
                 ),
-              ),
-
-              SizedBox(
-                height: 32,
-              ),
-              Container(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 159, vertical: 18),
-                      backgroundColor: Colors.pink,
-                      primary: Colors.black),
-                  child: Text("HOST"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CreateRoom()));
-                  },
+                Container(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 159, vertical: 18),
+                        backgroundColor: Color(0xff04E9CD),
+                        primary: Colors.black),
+                    child: Text("JOIN"),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => JoinLobby()));
+                    },
+                  ),
                 ),
-              )
-            ],
+                SizedBox(
+                  height: 32,
+                ),
+                Container(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 159, vertical: 18),
+                        backgroundColor: Colors.pink,
+                        primary: Colors.black),
+                    child: Text("HOST"),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CreateRoom()));
+                    },
+                  ),
+                )
+              ],
+            ),
           ),
           BackButtonSPS(),
           Padding(
@@ -120,8 +127,10 @@ class _TeamState extends State<Team> {
                   decoration: ShapeDecoration(
                       color: Color(0xff04E9CD), shape: CircleBorder()),
                   child: IconButton(
-                      icon: Icon(Icons.info, size: 35
-                      ,),
+                      icon: Icon(
+                        Icons.info,
+                        size: 35,
+                      ),
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -133,8 +142,7 @@ class _TeamState extends State<Team> {
             ),
           ),
         ],
-      )
-      ),
+      )),
     );
   }
 }
