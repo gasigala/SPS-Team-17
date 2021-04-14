@@ -71,10 +71,7 @@ class _Fluttercards2State extends State<Fluttercards2> {
               //When swipe left goes home
               if (i==3)
               {
-                {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Home()));
-                }
+
               }
             },
             swipeCompleteCallback:
