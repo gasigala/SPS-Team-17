@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
+import 'package:sps_team17/home-scren.dart';
 
 class Fluttercards extends StatefulWidget {
   @override
@@ -8,6 +9,7 @@ class Fluttercards extends StatefulWidget {
 }
 
 class _FluttercardsState extends State<Fluttercards> {
+  int i = 0;
   List<String> welcomeImages =[
     "images/img1.jpg",
     "images/img2.jpg",
@@ -15,6 +17,9 @@ class _FluttercardsState extends State<Fluttercards> {
     "images/img4.jpg",
     "images/img5.jpg",
     "images/img6.jpg",
+  ];
+  List<String> welcomeImages1 =[
+    "images/img2.jpg",
   ];
 
   @override
@@ -26,7 +31,7 @@ class _FluttercardsState extends State<Fluttercards> {
 
       body: Stack(
       children: [Container(
-          height: MediaQuery.of(context).size.height * 0.7,
+          height: MediaQuery.of(context).size.height * 0.9,
 
           child:TinderSwapCard(
             orientation: AmassOrientation.BOTTOM,
@@ -34,9 +39,9 @@ class _FluttercardsState extends State<Fluttercards> {
             stackNum: 4,
             swipeEdge: 4.0,
             maxWidth: MediaQuery.of(context).size.width * 0.9,
-            maxHeight: MediaQuery.of(context).size.width * 0.9,
-            minWidth: MediaQuery.of(context).size.width * 0.8,
-            minHeight: MediaQuery.of(context).size.width * 0.8,
+            maxHeight: MediaQuery.of(context).size.width * 1.5,
+            minWidth: MediaQuery.of(context).size.width * 0.85,
+            minHeight: MediaQuery.of(context).size.width * 1.4,
             cardBuilder: (context, index) => Card(
               child: Image.asset('${welcomeImages[index]}'),
             ) ,
@@ -45,37 +50,25 @@ class _FluttercardsState extends State<Fluttercards> {
                 (DragUpdateDetails details, Alignment align){
               if(align.x < 0){
                 print("hello");
+                i++;
               }else if (align.x > 0){
                 print("jack");
               }
-
+              //When swipe left goes home
+              if (i==3)
+                {
+                  {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  }
+                }
             },
             swipeCompleteCallback:
                 (CardSwipeOrientation orientaion , int index){
             },
           ),
       ),
-    Container(
-      child: Column(
-        children: <Widget>[
-          SizedBox(
-            height: 520,
-          ),
-          Container(
-      child: Center(
-      child: Text(
-        "Asian Chao",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 45,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      ),),
-    ],
-    ),
-    ),
+
     ],
     ),
     );
