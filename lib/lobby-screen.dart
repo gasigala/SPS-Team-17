@@ -59,7 +59,7 @@ class JoinLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "Erik",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -71,7 +71,7 @@ class JoinLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "Dyllan",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -83,7 +83,7 @@ class JoinLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "Gregorio",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -95,7 +95,7 @@ class JoinLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -108,7 +108,7 @@ class JoinLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -120,7 +120,7 @@ class JoinLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -130,7 +130,7 @@ class JoinLobby extends StatelessWidget {
                           decoration: BoxDecoration(),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),

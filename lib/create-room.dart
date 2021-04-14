@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sps_team17/host-lobby-screen.dart';
-
 import './screen-slider.dart';
 import './price-buttonbar.dart';
 import './dropdown-category.dart';
@@ -11,7 +10,7 @@ class CreateRoom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xff010F32),
-        body: Stack(children: [
+        body: Stack(children:  [
           SafeArea(
             child: Center(
               child: Padding(
@@ -28,11 +27,13 @@ class CreateRoom extends StatelessWidget {
                     //this will be the enter your name part of the form
                     Padding(
                       padding: const EdgeInsets.all(8.0),
+                      child: Center(
                       child: TextFormField(
                         style: TextStyle(color: Colors.white),
+
                         decoration: InputDecoration(
                           hintText: 'Enter your Name',
-                          hintStyle: TextStyle(color: Colors.white),
+                          hintStyle: TextStyle(color: Colors.white,),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25.0),
                             borderSide: BorderSide(
@@ -40,26 +41,11 @@ class CreateRoom extends StatelessWidget {
                               width: 2.0,
                             ),
                           ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          hintText: 'Enter your Address',
-                          hintStyle: TextStyle(color: Colors.white),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                            borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2.0,
-                            ),
                           ),
                         ),
                       ),
                     ),
+
                     const Divider(
                       height: 20,
                       color: Colors.white,
