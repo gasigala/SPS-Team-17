@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "564794104004",
+    "project_id": "spring21-sps-17",
+    "storage_bucket": "spring21-sps-17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564794104004:android:451ebcdc4e171962bbd191",
+        "android_client_info": {
+          "package_name": "com.example.sps_team17"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564794104004-a537s5i45fkbtto5ir8o654t4v7jap17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMDZg70dNuZHnQ4VrQBb9no_7cqvqi9h4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564794104004-a537s5i45fkbtto5ir8o654t4v7jap17.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
