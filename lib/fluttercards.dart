@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
+import 'package:sps_team17/flutterFinal.dart';
 import 'package:sps_team17/home-scren.dart';
 
 class Fluttercards extends StatefulWidget {
@@ -30,7 +31,8 @@ class _FluttercardsState extends State<Fluttercards> {
       backgroundColor: Color(0xff010f32),
 
       body: Stack(
-      children: [Container(
+      children: [
+        Container(
           height: MediaQuery.of(context).size.height * 0.9,
 
           child:TinderSwapCard(
@@ -59,7 +61,7 @@ class _FluttercardsState extends State<Fluttercards> {
                 {
                   {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
+                        MaterialPageRoute(builder: (context) => Fluttercards2()));
                   }
                 }
             },

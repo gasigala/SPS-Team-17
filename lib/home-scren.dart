@@ -1,6 +1,10 @@
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sps_team17/create-solo-session.dart';
 import 'package:sps_team17/team-room-screen.dart';
+import 'auth.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -8,6 +12,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  final AuthService _auth = AuthService();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +67,16 @@ class _HomeState extends State<Home> {
                   child: IconButton(
                       icon: Icon(Icons.group),
                       color: Colors.white,
-                      onPressed: () {
+                      onPressed: () async{
+                      dynamic result = await _auth.signInAnon("test", "test");
+                      if (result == null) {
+                        print('error');
+                      }
+                      else
+                        {
+                          print('signed in');
+                              print(result);
+                        }
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Team()));
                       }),
