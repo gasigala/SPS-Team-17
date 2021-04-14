@@ -92,20 +92,24 @@ class _TeamState extends State<Team> {
               SizedBox(
                 height: 32,
               ),
-              Container(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 159, vertical: 18),
-                      backgroundColor: Colors.pink,
-                      primary: Colors.black),
-                  child: Text("HOST"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CreateRoom()));
-                  },
+              Flexible(
+                child: Container(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 159, vertical: 18),
+                        backgroundColor: Colors.pink,
+                        primary: Colors.black),
+                    child: Text("HOST"),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CreateRoom()));
+                    },
+                  ),
                 ),
-              )
+              ),
             ],
           ),
           BackButtonSPS(),
@@ -118,8 +122,10 @@ class _TeamState extends State<Team> {
                   decoration: ShapeDecoration(
                       color: Color(0xff04E9CD), shape: CircleBorder()),
                   child: IconButton(
-                      icon: Icon(Icons.info, size: 35
-                      ,),
+                      icon: Icon(
+                        Icons.info,
+                        size: 35,
+                      ),
                       onPressed: () {
                         Navigator.push(
                           context,

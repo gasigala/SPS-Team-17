@@ -10,103 +10,102 @@ class CreateRoom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff010F32),
-        body: Stack(children: [
-          SafeArea(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Create Room',
-                        style: TextStyle(fontSize: 40, color: Colors.white),
-                      ),
+      backgroundColor: Color(0xff010F32),
+      body: Stack(children: [
+        SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Create Room',
+                      style: TextStyle(fontSize: 40, color: Colors.white),
                     ),
-                    //this will be the enter your name part of the form
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          hintText: 'Enter your Name',
-                          hintStyle: TextStyle(color: Colors.white),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                            borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2.0,
-                            ),
+                  ),
+                  //this will be the enter your name part of the form
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        hintText: 'Enter your Name',
+                        hintStyle: TextStyle(color: Colors.white),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2.0,
                           ),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: TextFormField(
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          hintText: 'Enter your Address',
-                          hintStyle: TextStyle(color: Colors.white),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                            borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2.0,
-                            ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        hintText: 'Enter your Address',
+                        hintStyle: TextStyle(color: Colors.white),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2.0,
                           ),
                         ),
                       ),
                     ),
-                    const Divider(
-                      height: 20,
-                      color: Colors.white,
-                      thickness: 2,
+                  ),
+                  const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
+                  //this is the slider part of the solo run screen
+                  ScreenSlider(),
+                  const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Select Price Range",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
-                    //this is the slider part of the solo run screen
-                    ScreenSlider(),
-                    const Divider(
-                      height: 20,
-                      color: Colors.white,
-                      thickness: 2,
+                  ),
+                  PriceButtonBar(),
+                  const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Select Category',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Select Price Range",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                    ),
-                    PriceButtonBar(),
-                    const Divider(
-                      height: 20,
-                      color: Colors.white,
-                      thickness: 2,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Select Category',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                    ),
-                    DropDownCategory(),
-                    const Divider(
-                      height: 20,
-                      color: Colors.white,
-                      thickness: 2,
-                    ),
-                    SubmitButton(),
-                  ],
-                ),
+                  ),
+                  DropDownCategory(),
+                  const Divider(
+                    height: 20,
+                    color: Colors.white,
+                    thickness: 2,
+                  ),
+                  SubmitButton(),
+                ],
               ),
             ),
           ),
-          BackButtonSPS(),
-        ]
         ),
+        BackButtonSPS(),
+      ]),
     );
   }
 }
