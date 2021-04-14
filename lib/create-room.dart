@@ -9,12 +9,13 @@ class CreateRoom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff010F32),
-        body: Stack(children:  [
-          SafeArea(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+      backgroundColor: Color(0xff010F32),
+      body: Stack(children: [
+        SafeArea(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     Padding(
@@ -28,19 +29,20 @@ class CreateRoom extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Center(
-                      child: TextFormField(
-                        style: TextStyle(color: Colors.white),
-
-                        decoration: InputDecoration(
-                          hintText: 'Enter your Name',
-                          hintStyle: TextStyle(color: Colors.white,),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                            borderSide: BorderSide(
+                        child: TextFormField(
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            hintText: 'Enter your Name',
+                            hintStyle: TextStyle(
                               color: Colors.white,
-                              width: 2.0,
                             ),
-                          ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(25.0),
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 2.0,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -90,9 +92,9 @@ class CreateRoom extends StatelessWidget {
               ),
             ),
           ),
-          BackButtonSPS(),
-        ]
         ),
+        BackButtonSPS(),
+      ]),
     );
   }
 }
