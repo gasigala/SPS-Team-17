@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sps_team17/fluttercards.dart';
 import './back-button.dart';
 
 class HostLobby extends StatelessWidget {
@@ -58,7 +59,7 @@ class HostLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "Erik",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -70,7 +71,7 @@ class HostLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "Gregorio",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -82,7 +83,7 @@ class HostLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "Dyllan",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -94,7 +95,7 @@ class HostLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -107,7 +108,7 @@ class HostLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -119,7 +120,7 @@ class HostLobby extends StatelessWidget {
                                   bottom: BorderSide(color: Colors.grey[300]))),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -129,7 +130,7 @@ class HostLobby extends StatelessWidget {
                           decoration: BoxDecoration(),
                           child: Center(
                             child: Text(
-                              "Jannet",
+                              "",
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -140,20 +141,19 @@ class HostLobby extends StatelessWidget {
                   SizedBox(
                     height: 40,
                   ),
-                  Center(
-                    child: Container(
-                        width: 120,
-                        padding: EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                            color: Colors.blue[800]),
-                        child: Center(
-                          child: Text(
-                            "Create",
-                            style:
-                                TextStyle(color: Colors.white.withOpacity(.7)),
-                          ),
-                        )),
+                  Container(
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          padding:
+                          EdgeInsets.symmetric(horizontal: 159, vertical: 18),
+                          backgroundColor: Color(0xff04E9CD),
+                          primary: Colors.black),
+                      child: Text("START"),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Fluttercards()));
+                      },
+                    ),
                   ),
                 ],
               ),

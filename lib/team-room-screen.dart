@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sps_team17/fluttercards.dart';
 
 import 'create-room.dart';
 import 'lobby-screen.dart';
@@ -19,7 +20,7 @@ class _TeamState extends State<Team> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff000C2D),
-      body: Stack(
+      body:(Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -75,7 +76,7 @@ class _TeamState extends State<Team> {
               SizedBox(
                 height: 32,
               ),
-              Container(
+             Container(
                 child: TextButton(
                   style: TextButton.styleFrom(
                       padding:
@@ -89,6 +90,7 @@ class _TeamState extends State<Team> {
                   },
                 ),
               ),
+
               SizedBox(
                 height: 32,
               ),
@@ -131,6 +133,7 @@ class _TeamState extends State<Team> {
             ),
           ),
         ],
+      )
       ),
     );
   }
