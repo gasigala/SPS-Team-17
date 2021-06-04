@@ -1,16 +1,14 @@
 # sps_team17
 
-A new Flutter project.
+FoodMates                           
 
-## Getting Started
+Website - https://googlespsteam17.netlify.app/
 
-This project is a starting point for a Flutter application.
+App Demo - https://www.youtube.com/watch?v=aNFjvKnM-2E
 
-A few resources to get you started if this is your first Flutter project:
+App Beta Download - https://drive.google.com/drive/u/1/folders/1CJfvDeI7E65Aej58_QrBlijTjFqB-q-n
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+                                     Project Details
+                                            |
+                                            v
+[Feature List (1).pdf](https://github.com/gasigala/SPS-Team-17/files/6600289/Feature.List.1.pdf)
